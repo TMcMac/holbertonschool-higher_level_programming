@@ -9,10 +9,12 @@
 int check_cycle(listint_t *list)
 {
     int count = 0;
-    listint_t *mover = list;
+    listint_t *mover;
 
     if (list == NULL)
       return 0;
+
+    mover = list;
 
     while (mover != NULL)
     {
