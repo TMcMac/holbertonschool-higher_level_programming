@@ -10,7 +10,10 @@ int check_cycle(listint_t *list)
 {
     int count = 0;
     listint_t *mover = list;
-  
+
+    if (list == NULL)
+      return 0;
+
     while (mover != NULL)
     {
       if (mover == list && count != 0)
