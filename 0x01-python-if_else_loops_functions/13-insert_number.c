@@ -25,7 +25,7 @@ listint_t *insert_node(listint_t **head, int number)
   new_node->n = number;
   /* If number is less than the n in head, point 
      new_node at head and assign head new_node */
-  if (number < mover->n)
+  if (number <= mover->n)
     {
       new_node->next = mover;
       *head = new_node;
@@ -35,7 +35,7 @@ listint_t *insert_node(listint_t **head, int number)
   while (mover != NULL)
     {
       /* If the next node n is > new node n*/
-      if (mover->next->n > number)
+      if (mover->next->n >= number)
         {
 	  new_node->next = mover->next;
 	  mover->next = new_node;
