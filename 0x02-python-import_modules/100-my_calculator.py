@@ -7,7 +7,7 @@ if __name__ == "__main__":
     args = argv[1:]
 
     if len(args) is not 3:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b> ")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     else:
         a = int(args[0])
@@ -22,5 +22,5 @@ if __name__ == "__main__":
         elif op is "*":
             print("{:d} {} {:d} = {:d}".format(a, op, b, mul(a, b)))
         else:
-            print("Unknown operator. Available operators: +, -, * and / ")
+            print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
