@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    import calculator_1 as math
+    from calculator_1 import add, sub, mul, div
     from sys import argv
 
     ops = ['+', '-', '*', '/']
@@ -17,11 +17,11 @@ if __name__ == "__main__":
             a = int(argv[1])
             b = int(argv[3])
             op = argv[2]
-            if argv[2] is '+':
-                print("{} {} {} = {}".format(a, op, b, math.add(a, b)))
-            elif argv[2] is '-':
-                print("{} {} {} = {}".format(a, op, b, math.sub(a, b)))
-            elif argv[2] is '*':
-                print("{} {} {} = {}".format(a, op, b, math.mul(a, b)))
+            if op is '+':
+                print("{:d} {} {:d} = {:d}".format(a, op, b, add(a, b)))
+            elif op is '-':
+                print("{:d} {} {:d} = {:d}".format(a, op, b, sub(a, b)))
+            elif op is '/':
+                print("{:d} {} {:d} = {:d}".format(a, op, b, div(a, b)))
             else:
-                print("{} {} {} = {}".format(a, op, b, math.div(a, b)))
+                print("{:d} {} {:d} = {:d}".format(a, op, b, mul(a, b)))
