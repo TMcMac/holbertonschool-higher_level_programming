@@ -5,7 +5,7 @@ def print_matrix_integer(matrix=[[]]):
     count = 1
     for row in matrix:
         for num in row:
-            print("{}".format(num), end='')
+            print("{:d}".format(num), end='')
             if count < len(row):
                 print(" ", end='')
             count += 1
