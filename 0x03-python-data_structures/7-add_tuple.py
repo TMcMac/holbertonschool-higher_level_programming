@@ -8,7 +8,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
         new_tuple = (tuple_a[0], 0)
     else:
         new_tuple = (tuple_a[0], tuple_a[1])
-    
+
     if len(tuple_b) < 1:
         return new_tuple
     elif len(tuple_b) < 2:

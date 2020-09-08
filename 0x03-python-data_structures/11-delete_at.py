@@ -5,7 +5,7 @@ def delete_at(my_list=[], idx=0):
         pass
     elif idx == 0:
         my_list = my_list[1:]
-    elif idx == len(my_list) -1:
+    elif idx == len(my_list) - 1:
         my_list = my_list[:idx]
     else:
         my_list = my_list[:idx] + my_list[(idx + 1):]
