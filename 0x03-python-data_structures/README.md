@@ -2,62 +2,83 @@
 
 ## Resources:books:
 Read or watch:
-* [Modules](https://intranet.hbtn.io/rltoken/hYag6ME71pOg2xkjqrLDdg)
-* [Command line arguments](https://intranet.hbtn.io/rltoken/CkqNLqqCuYsLbkCIVSKLWA)
-* [PEP 8 – Style Guide for Python Code](https://intranet.hbtn.io/rltoken/XWzCcj9tvlC2IYjdNDiNAg)
+* [3.1.3. Lists](https://intranet.hbtn.io/rltoken/zIxzk5ChUX6KzhJIxJjf9Q)
+* [Data structures](https://intranet.hbtn.io/rltoken/ugotLwGPHgU1raKqco8TFg)
+* [Learn to Program 6 : Lists](https://intranet.hbtn.io/rltoken/smot10KJXMP-a84UxJ7WrQ)
 
 ---
 ## Learning Objectives:bulb:
 What you should learn from this project:
 
 * Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
-* How to import functions from another file
-* How to use imported functions
-* How to create a module
-* How to use the built-in function dir()
-* How to prevent code in your script from being executed when imported
-* How to use command line arguments with your Python programs
+* What are lists and how to use them
+* What are the differences and similarities between strings and lists
+* What are the most common methods of lists and how to use them
+* How to use lists as stacks and queues
+* What are list comprehensions and how to use them
+* What are tuples and how to use them
+* When to use tuples versus lists
+* What is a sequence
+* What is tuple packing
+* What is sequence unpacking
+* What is the del statement and how to use it
 
 ---
 
-### [0. Import a simple function from a simple file](./0-add.py)
-* Write a program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3
+### [0. Print a list of integers](./0-print_list_integer.py)
+* Write a function that prints all integers of a list.
 
 
-### [1. My first toolbox!](./1-calculation.py)
-* Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.
+### [1. Secure access to an element in a list ](./1-element_at.py)
+* Write a function that retrieves an element from a list like in C.
 
 
-### [2. How to make a script dynamic!](./2-args.py)
-* Write a program that prints the number of and the list of its arguments.
+### [2. Replace element](./2-replace_in_list.py)
+* Write a function that replaces an element of a list at a specific position (like in C).
 
 
-### [3. Infinite addition](./3-infinite_add.py)
-* Write a program that prints the result of the addition of all arguments
+### [3. Print a list of integers... in reverse!](./3-print_reversed_list_integer.py)
+* Write a function that prints all integers of a list, in reverse order.
 
 
-### [4. Who are you?](./4-hidden_discovery.py)
-* Write a program that prints all the names defined by the compiled module hidden_4.pyc (please download it locally).
+### [4. Replace in a copy](./4-new_in_list.py)
+* Write a function that replaces an element in a list at a specific position without modifying the original list (like in C).
 
 
-### [5. Everything can be imported](./5-variable_load.py)
-* Write a program that imports the variable a from the file variable_load_5.py and prints its value.
+### [5. Can you C me now?](./5-no_c.py)
+* Write a function that removes all characters c and C from a string.
 
 
-### [6. Build my own calculator!](./100-my_calculator.py)
-* Write a program that imports all functions from the file calculator_1.py and handles basic operations.
+### [6. Lists of lists = Matrix ](./6-print_matrix_integer.py)
+* Write a function that prints a matrix of integers.
 
 
-### [7. Easy print](./101-easy_print.py)
-* Write a program that prints #pythoniscool, followed by a new line, in the standard output.
+### [7. Tuples addition ](./7-add_tuple.py)
+* Write a function that adds 2 tuples.
 
 
-### [8. ByteCode -> Python #3](./102-magic_calculation.py)
-* Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
+### [8. More returns!](./8-multiple_returns.py)
+* Write a function that returns a tuple with the length of a string and its first character.
 
 
-### [9. Fast alphabet](./103-fast_alphabet.py)
-* Write a program that prints the alphabet in uppercase, followed by a new line.
+### [9. Find the max](./9-max_integer.py)
+* Write a function that finds the biggest integer of a list.
+
+
+### [10. Only by 2](./10-divisible_by_2.py)
+* Write a function that finds all multiples of 2 in a list.
+
+
+### [11. Delete at](./11-delete_at.py)
+* Write a function that deletes the item at a specific position in a list.
+
+
+### [12. Switch](./12-switch.py)
+* Complete the source code in order to switch value of a and b
+
+
+### [13. Linked list palindrome](./13-is_palindrome.c)
+* Write a function in C that checks if a singly linked list is a palindrome.
 
 ---
 
