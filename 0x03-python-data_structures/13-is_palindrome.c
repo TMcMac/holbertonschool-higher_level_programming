@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 	listint_t *mover;
 	int end = 0;
 	int start = 0;
-	int thelist[1024]; 
+	int thelist[100];
 
 	if ((*head) == NULL)
 		return (1);
