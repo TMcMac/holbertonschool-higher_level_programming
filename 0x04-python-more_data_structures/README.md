@@ -64,28 +64,28 @@ What you should learn from this project:
 * Write a function that returns a new dictionary with all values multiplied by 2
 
 
-### [](./)
-* 
+### [10. Best score](./10-best_score.py)
+* Write a function that returns a key with the biggest integer value.
 
 
-### [](./)
-* 
+### [11. Multiply by using map](./11-multiply_list_map.py)
+* Write a function that returns a list with all values multiplied by a number without using any loops.
 
 
-### [](./)
-* 
+### [12. Roman to Integer](./12-roman_to_int.py)
+* Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
 
 
-### [](./)
-* 
+### [13. Weighted average!](./100-weight_average.py)
+* Write a function that returns the weighted average of all integers tuple (<score>, <weight>)
 
 
-### [](./)
-* 
+### [14. Squared by using map](./101-square_matrix_map.py)
+* Write a function that computes the square value of all integers of a matrix using map
 
 
-### [](./)
-* 
+### [15. Delete by value ](./102-complex_delete.py)
+* Write a function that deletes keys with a specific value in a dictionary.
 
 
 
