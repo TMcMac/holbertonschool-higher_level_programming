@@ -1,0 +1,77 @@
+This is the testfile for project 2
+==================================
+Dividing all numbers in a matrix
+-------------------
+
+First we need to import the function
+::
+>>> divi = __import__('2-matrix_divided').matrix_divided
+
+Next lets run a few tests that ought to just work
+::
+>>> matrix = [[10, 20, 30],[40, 50, 60]]
+>>> divi(matrix, 2)
+[[5.0, 10.0, 15.0], [20.0, 25.0, 30.0]]
+
+>>> divi(matrix, 3.14)
+[[3.18, 6.37, 9.55], [12.74, 15.92, 19.11]]
+
+>>> divi(matrix, -3)
+[[-3.33, -6.67, -10.0], [-13.33, -16.67, -20.0]]
+
+>>> divi(matrix, 1)
+[[10.0, 20.0, 30.0], [40.0, 50.0, 60.0]]
+
+>>> divi(matrix, 1.7976931348623157e+308)
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+===================================================
+
+Now lets trigger some errors
+::
+>>> divi(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> divi(matrix, "BigMood")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix = [[10, 20],[30, 40, 50, 60]]
+>>> divi(matrix, 5)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix = [[0, 1, "Two"],[3, "Four", 5]]
+>>> divi(matrix, 5)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [10, 20, 30, 40, 50, 60]
+>>> divi(matrix, 5)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[],[1, 2, 3, 5]]
+>>> divi(matrix, 5)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1, 2, 3],[]]
+>>> divi(matrix, 5)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix = [[],[]]
+>>> divi(matrix, 5)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[10, 20, 30],[40, 50, 60]]
+>>> divi(matrix)
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> divi()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
