@@ -1,0 +1,65 @@
+This is the test file for exercise 3
+====================================
+Print a square
+------------------------------------
+
+
+First lets import our function
+------------------------------
+::
+>>> square = __import__('4-print_square').print_square
+
+
+Now lets run a few tests that should work
+-----------------------------------------
+::
+>>> square(4)
+####
+####
+####
+####
+
+>>> square(0)
+
+>>> num = 16
+>>> square(num)
+################
+################
+################
+################
+################
+################
+################
+################
+################
+################
+################
+################
+################
+################
+################
+################
+
+
+Now how about a few that will fail
+----------------------------------
+::
+>>> square("Carrot")
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> square(None)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> square(-1)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+>>> square(3.14)
+Traceback (most recent call last):
+TypeError: size must be an integer
+
+>>> square()
+Traceback (most recent call last):
+TypeError: print_square() missing 1 required positional argument: 'size'

@@ -1,0 +1,47 @@
+This is the test file for 3-say_my_name.py
+==========================================
+This function takes 1 or 2 strings as input 
+and prints a message
+------------------------------------------
+
+
+First lets import our function as name
+--------------------------------------
+::
+>>> name = __import__('3-say_my_name').say_my_name
+
+
+Next lets run some tests that should pass
+-----------------------------------------
+::
+>>> name("Walter", "White")
+My name is Walter White
+
+>>> first = "Tim"
+>>> last = "McMacken"
+>>> name(first)
+My name is Tim 
+>>> name(first, last)
+My name is Tim McMacken
+>>> name("C")
+My name is C 
+>>> name("C", "Money")
+My name is C Money
+>>> name("")
+My name is  
+
+
+Ok now how about some fail conditions
+-------------------------------------
+::
+>>> name("Number", 11)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> name(3.14)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
