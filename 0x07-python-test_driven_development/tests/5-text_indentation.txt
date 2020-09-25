@@ -1,0 +1,50 @@
+This is the text file for exercise 4
+=============================================
+Break a long string in to double spaced lines
+---------------------------------------------
+
+
+First we need to import our function
+::
+	>>> line_break = __import__('5-text_indentation').text_indentation
+
+
+Next lets try a few things that should just work
+
+::
+	>>> line_break("This is. Some. Text. Will it: Work?")
+	This is.
+	<BLANKLINE>
+	Some.
+	<BLANKLINE>
+	Text.
+	<BLANKLINE>	
+	Will it:
+	<BLANKLINE>
+	Work?
+
+	>>> line_break("")
+
+	>>> line_break("This.Is:Some?Text.")
+	This.
+	<BLANKLINE>
+	Is:
+	<BLANKLINE>
+	Some?
+	<BLANKLINE>
+	Text.
+
+Now how about something things that wont work
+
+::
+	>>> line_break(555)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> line_break(['This', 'Should', 'Not', 'Work'])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> line_break()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
