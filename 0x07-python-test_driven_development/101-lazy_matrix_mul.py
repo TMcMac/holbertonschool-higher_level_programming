@@ -1,4 +1,4 @@
-#!/ur/bin/python3
+#!/usr/bin/python3
 """ A function to multiply two matracies """
 import numpy as np
 
