@@ -1,4 +1,4 @@
-#!/ur/bin/python3
+#!/usr/bin/python3
 """ A function to multiply two matracies """
 import numpy as np
 
@@ -14,12 +14,10 @@ def lazy_matrix_mul(m_a, m_b):
         raise TypeError('m_a must be a list')
     if m_a == [] or m_a == [[]]:
         raise ValueError("m_a can't be empty")
-    if not isinstance (m_b, list):
+    if not isinstance(m_b, list):
         raise TypeError('m_b must be a list')
     if m_b == [] or m_b == [[]]:
         raise ValueError("m_b can't be empty")
-    if len(m_a[0]) != len(m_b):
-        raise ValueError("m_a and m_b can't be multiplied")
     for alist in m_a:
         if not isinstance(alist, list):
             raise TypeError('m_a must be a list of lists')
@@ -36,7 +34,8 @@ def lazy_matrix_mul(m_a, m_b):
         for num in blist:
             if not isinstance(num, (int, float)):
                 raise TypeError('m_b should contain only integers or floats')
-
+    if len(m_a[0]) != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
 
     a = np.array(m_a)
     b = np.array(m_b)
