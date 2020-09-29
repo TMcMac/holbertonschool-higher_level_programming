@@ -7,7 +7,7 @@ class Rectangle():
     A class for foursided polygons
     """
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
@@ -15,8 +15,8 @@ class Rectangle():
         Param1: the width, >=0, must be an int
         Param2: the height, >=0, must be an int
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -75,7 +75,7 @@ class Rectangle():
         else:
             for row in range(self.__height):
                 for col in range(self.__width):
-                    obj_str += Rectangle.print_symbol
+                    obj_str += str(self.print_symbol)
                 obj_str += '\n'
             obj_str = obj_str[:-1]
             return obj_str
