@@ -4,4 +4,4 @@
 
 class Rectangle():
     """Just a class definition, nothing more """
-    pass;
+    pass
