@@ -75,7 +75,7 @@ class Rectangle():
         else:
             for row in range(self.__height):
                 for col in range(self.__width):
-                    obj_str += Rectangle.print_symbol
+                    obj_str += str(self.print_symbol)
                 obj_str += '\n'
             obj_str = obj_str[:-1]
             return obj_str
