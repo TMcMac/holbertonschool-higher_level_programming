@@ -22,6 +22,7 @@ class Rectangle():
     def width(self):
         """Returns the width of the obj"""
         return self.__width
+
     @property
     def height(self):
         """Returns the height of the obj"""
@@ -77,7 +78,7 @@ class Rectangle():
                 obj_str += '\n'
             obj_str = obj_str[:-1]
             return obj_str
-    
+
     def __repr__(self):
         """
         Returns the function and dimentions for eval

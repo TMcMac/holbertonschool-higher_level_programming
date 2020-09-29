@@ -22,6 +22,7 @@ class Rectangle():
     def width(self):
         """Returns the width of the obj"""
         return self.__width
+
     @property
     def height(self):
         """Returns the height of the obj"""

@@ -22,10 +22,12 @@ class Rectangle():
     def width(self):
         """Returns the width"""
         return self.__width
+
     @property
     def height(self):
         """Returns the height"""
         return self.__height
+
     @width.setter
     def width(self, val):
         """
@@ -37,6 +39,7 @@ class Rectangle():
         if val < 0:
             raise ValueError('width must be >= 0')
         self.__width = val
+
     @height.setter
     def height(self, val):
         """
@@ -79,9 +82,8 @@ class Rectangle():
     def __repr__(self):
         """Returns a obj representation for eval()"""
         return("Rectangle({}, {})".format(self.width, self.height))
-    
+
     def __del__(self):
         """Delete function"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-    
