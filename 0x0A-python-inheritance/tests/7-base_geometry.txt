@@ -1,0 +1,49 @@
+THis is the doctest for Project 254
+Exercise 7: Base_Geometry
+===================================
+
+
+First we will need to import our function
+-----------------------------------------
+
+::
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+
+
+Next lets run some test that should work to check output
+--------------------------------------------------------
+
+::
+>>> bg.integer_validator("Tim", 33)
+True
+>>> bg.integer_validator("Viet", 43)
+True
+>>> bg.integer_validator("Staci", 35)
+True
+
+
+
+Now lets break some stuff! 
+--------------------------
+
+::
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+TypeError: name must be an integer
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
+>>> bg.integer_validator("distance")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> bg.integer_validator(10, "Hello")
+Traceback (most recent call last):
+TypeError: 10 must be an integer

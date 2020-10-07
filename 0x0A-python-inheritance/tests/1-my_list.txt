@@ -1,0 +1,78 @@
+This is the testfile for 
+Project 254 exercise 1: My List
+===============================
+
+
+First we need to import our function
+::
+>>> MyList = __import__('1-my_list').MyList
+
+*******************************
+Tests that should work
+*******************************
+
+::
+>>> new_list = MyList()
+>>> new_list.append(8)
+>>> new_list.append(10)
+>>> new_list.append(22)
+>>> new_list.append(4)
+>>> print(new_list)
+[8, 10, 22, 4]
+>>> new_list.print_sorted()
+[4, 8, 10, 22]
+
+>>> new_list = MyList()
+>>> new_list.append(-10)
+>>> new_list.append(-2)
+>>> new_list.append(0)
+>>> new_list.append(-9)
+>>> print(new_list)
+[-10, -2, 0, -9]
+>>> new_list.print_sorted()
+[-10, -9, -2, 0]
+
+Ok what about and empty list
+
+::
+>>> new_list = MyList()
+>>> print(new_list)
+[]
+>>> new_list.print_sorted()
+[]
+
+Ok how about all ==
+::
+>>> new_list = MyList()
+>>> new_list.append(1000)
+>>> new_list.append(1000)
+>>> new_list.append(1000)
+>>> new_list.append(1000)
+>>> print(new_list)
+[1000, 1000, 1000, 1000]
+>>> new_list.print_sorted()
+[1000, 1000, 1000, 1000]
+
+How about words?
+::
+>>> new_list = MyList()
+>>> new_list.append("apple")
+>>> new_list.append("grape")
+>>> new_list.append("pear")
+>>> new_list.append("orange")
+>>> print(new_list)
+['apple', 'grape', 'pear', 'orange']
+>>> new_list.print_sorted()
+['apple', 'grape', 'orange', 'pear']
+
+
+
+
+*********************
+Now for for failures
+*********************
+::
+>>> new_list = []
+>>> new_list.print_sorted
+Traceback (most recent call last):
+AttributeError: 'list' object has no attribute 'print_sorted'
