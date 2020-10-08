@@ -1,11 +1,15 @@
 #!/usr/bin/python3
+"""Now appending text to a file"""
+
+
 def append_write(filename="", text=""):
     """
-    opens a supplied file and appends text to the
-    end of the file
+    This function will append text to a file
+    parameters - filename(file): destination file
+                 text(string): to be appended to file
     """
-    count = 0
-
-    with open(filename, mode="a", encoding="utf-8") as f:
-        count = f.write(text)
-    return count
+    with open(filename, mode="a+", encoding="utf-8") as a:
+        """
+        Safe open in append mode
+        """
+        return a.write(text)

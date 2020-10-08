@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Using JSON to output a string"""
+
 import json
 
 

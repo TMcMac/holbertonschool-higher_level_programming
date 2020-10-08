@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Writing a string of text in UTF8"""
+
+
 def write_file(filename="", text=""):
     """
     Writing a string of text in UTF8 to a file

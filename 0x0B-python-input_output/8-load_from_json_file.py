@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Makes an object from a string from a file"""
 import json
 
 

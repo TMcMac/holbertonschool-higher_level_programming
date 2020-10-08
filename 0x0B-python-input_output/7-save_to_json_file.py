@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Write obj to text file"""
 import json
 
 
