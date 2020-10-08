@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
+
 def pascal_triangle(n=0):
+    """
+    A function to build a pascal triangle of n rows
+    """
     triangle = []
     if n <= 0:
         return triangle
