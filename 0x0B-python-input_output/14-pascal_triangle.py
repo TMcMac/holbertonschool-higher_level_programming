@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Pascal's Triangle from scratch"""
 
 
 def pascal_triangle(n=0):
