@@ -22,7 +22,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    #Class functions
+    # Class functions
     def area(self):
         """
         Returns the area of a rectangle
@@ -87,7 +87,7 @@ class Rectangle(Base):
         }
         return (rec_dict)
 
-    #Getters and Setters
+    # Getters and Setters
     @property
     def width(self):
         """
