@@ -74,6 +74,19 @@ class Rectangle(Base):
                 if key in attrs:
                     setattr(self, key, kwargs[key])
 
+    def to_dictionary(self):
+        """
+        returns a dictionary version of the object
+        """
+        rec_dict = {
+            'width': self.__width,
+            'height': self.__height,
+            'x': self.__x,
+            'y': self.__y,
+            'id': self.id
+        }
+        return (rec_dict)
+
     #Getters and Setters
     @property
     def width(self):
