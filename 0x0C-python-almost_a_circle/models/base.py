@@ -40,7 +40,7 @@ class Base():
     def save_to_file(cls, list_objs):
         """
         Gets the JSON string rep of an obj
-        and saves it to a file with the name 
+        and saves it to a file with the name
         of the class
         param1: a list of objects
         """
@@ -50,6 +50,6 @@ class Base():
         list_dictionaries = []
         for obj in list_objs:
             list_dictionaries.append(obj.to_dictionary())
-        
+
         with open(fname, 'w') as f:
             f.write(cls.to_json_string(list_dictionaries))
