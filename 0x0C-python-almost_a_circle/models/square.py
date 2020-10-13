@@ -40,6 +40,19 @@ class Square(Rectangle):
         }
         return sqr_dict
 
+    def update(self, *args, **kwargs):
+        """
+        Function for updating obj of class square with args or kwargs
+        """
+        attrs = ['id', 'size', 'x', 'y']
+        if len(args) is not 0:
+            for i in range(len(args)):
+                setattr(self, attrs[i], args[i])
+        else:
+            for key in kwargs.keys():
+                if key in attrs:
+                    setattr(self, key, kwargs[key])
+
     @property
     def size(self):
         """
