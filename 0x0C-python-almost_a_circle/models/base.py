@@ -53,3 +53,42 @@ class Base():
 
         with open(fname, 'w') as f:
             f.write(cls.to_json_string(list_dictionaries))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Takes a JSON string makes it into
+        list of dictionaries
+        """
+        import json
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Creates instances from a dictionary
+        """
+        if cls.__name__ == "Rectangle":
+            instance = cls(1, 1, 0, 0)
+        if cls.__name__ == "Square":
+            instance = cls(1, 0, 0)
+        instance.update(**dictionary)
+        return instance
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Creates instances from a saved JSON file
+        """
+        filename = cls.__name__ + ".json"
+        results = []
+        try:
+            with open(filename, 'r') as f:
+                for instance in cls.from_json_string(f.read()):
+                    results.append(cls.create(**instance))
+        except Exception as err:
+            pass
+        return (results)
