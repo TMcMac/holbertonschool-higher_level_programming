@@ -9,7 +9,7 @@ class TestBase(unittest.TestCase):
     Testing Base class
     """
 
-   @classmethod
+    @classmethod
     def setUpBase(cls):
         pass
 
@@ -122,4 +122,4 @@ class TestBase(unittest.TestCase):
                                         'models/rectangle.py',
                                         'models/square.py'])
         self.assertEqual(result.total_errors, 0,
-                            "Found code style errors (and warnings).")
+                         "Found code style errors (and warnings).")

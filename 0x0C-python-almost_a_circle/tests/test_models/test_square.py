@@ -164,7 +164,6 @@ class TestSquare(unittest.TestCase):
         self.s1.update(id=100, size=7, y=11, x=12)
         self.assertEqual(self.s1.__str__(), "[Square] (100) 12/11 - 7")
 
-
     def test_class_docstring(self):
         """
         Description:
