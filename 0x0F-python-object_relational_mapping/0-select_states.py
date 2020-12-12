@@ -14,7 +14,8 @@ if __name__ == '__main__':
     my_host = "localhost"
 
     try:
-        db = MySQLdb.connect(host=my_host, port=3306, user=name, passwd=passw, db=datab)
+        db = MySQLdb.connect(host=my_host, port=3306,
+                             user=name, passwd=passw, db=datab)
         cur = db.cursor()
         cur.execute("SELECT * FROM states ORDER BY 'id' ASC")
         states = cur.fetchall()

@@ -15,9 +15,12 @@ if __name__ == '__main__':
     lhost = "localhost"
 
     try:
-        db = MySQLdb.connect(host=lhost, port=3306, user=un, passwd=pw, db=dbase)
+        db = MySQLdb.connect(host=lhost, port=3306,
+                             user=un, passwd=pw, db=dbase)
         cur = db.cursor()
-        cur.execute("""SELECT * FROM states WHERE name = '{}' ORDER BY id ASC""".format(state))
+        cur.execute("""SELECT * FROM states
+                       WHERE name = '{}'
+                       ORDER BY id ASC""".format(state))
         states = cur.fetchall()
     except MySQLdb.Error as e:
         try:

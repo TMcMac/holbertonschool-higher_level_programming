@@ -14,7 +14,8 @@ if __name__ == '__main__':
     my_host = "localhost"
 
     try:
-        db = MySQLdb.connect(host=my_host, port=3306, user=un, passwd=p, db=d)
+        db = MySQLdb.connect(host=my_host, port=3306,
+                             user=un, passwd=p, db=d)
         cur = db.cursor()
         cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY 'id' ASC")
         states = cur.fetchall()
