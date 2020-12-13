@@ -19,7 +19,8 @@ if __name__ == '__main__':
     my_host = "localhost"
 
     try:
-        db = MySQLdb.connect(host=my_host, port=3306, user=un, passwd=pw, db=dbase)
+        db = MySQLdb.connect(host=my_host, port=3306, user=un,
+                             passwd=pw, db=dbase)
         cur = db.cursor()
         cur.execute("""SELECT cities.id, cities.name, states.name
                        FROM cities

@@ -7,6 +7,7 @@ to get cities with their states
 import MySQLdb
 import sys
 
+
 def get_cities_by_state():
     """
     arguments will be username, password
@@ -18,14 +19,15 @@ def get_cities_by_state():
     dbase = sys.argv[3]
     astate = sys.argv[4]
     my_host = "localhost"
-    query  = """SELECT cities.name
+    query = """SELECT cities.name
                 FROM cities
                 INNER JOIN states ON cities.state_id = states.id
                 WHERE states.name = %s
                 ORDER BY cities.id ASC"""
 
     try:
-        db = MySQLdb.connect(host=my_host, port=3306, user=un, passwd=pw, db=dbase)
+        db = MySQLdb.connect(host=my_host, port=3306,
+                             user=un, passwd=pw, db=dbase)
         cur = db.cursor()
         cur.execute(query, (astate,))
         result = cur.fetchall()
