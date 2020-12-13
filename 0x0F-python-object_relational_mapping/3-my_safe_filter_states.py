@@ -10,16 +10,18 @@ if __name__ == '__main__':
     my_user = sys.argv[1]
     my_pass = sys.argv[2]
     my_db = sys.argv[3]
-    passedname = sys.argv[4]
+    check = sys.argv[4].split()
+    passedname = check[0]
     localhost = "localhost"
+    query = """SELECT * FROM states
+               WHERE name = %s
+               ORDER BY 'id' ASC"""
 
     try:
         db = MySQLdb.connect(host=localhost, port=3306, user=my_user,
                              passwd=my_pass, db=my_db)
         cur = db.cursor()
-        cur.execute("""SELECT * FROM states
-                       WHERE name = %s
-                       ORDER BY 'id' ASC""", (passedname,))
+        cur.execute(query, (passedname,))
         states = cur.fetchall()
     except MySQLdb.Error as e:
         try:
