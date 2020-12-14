@@ -21,11 +21,10 @@ def get_a_state():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter_by(name == astate).first()
-
-    if state is not None:
+    try:
+        state = session.query(State).filter_by(name == astate).first()
         print("{}".format(state.id))
-    else:
+    except:
         print("Not Found")
 
     session.close()
