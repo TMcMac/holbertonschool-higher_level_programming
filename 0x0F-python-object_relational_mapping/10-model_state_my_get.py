@@ -2,7 +2,6 @@
 """Get a state by name from the table states"""
 
 
-import sqlalchemy
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

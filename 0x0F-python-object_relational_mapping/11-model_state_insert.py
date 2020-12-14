@@ -6,7 +6,6 @@ Gets all states from the states table
 if __name__ == "__main__":
 
     from sys import argv
-    import sqlalchemy
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
     from model_state import State, Base
