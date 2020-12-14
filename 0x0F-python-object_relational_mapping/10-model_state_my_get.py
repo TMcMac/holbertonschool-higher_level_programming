@@ -15,11 +15,13 @@ def get_a_state():
     db = argv[3]
     astate = argv[4]
 
+    """
     if len(argv) > 5 and argv[5] is not None:
         if astate == "New":
             astate = astate + " " + argv[5]
         elif astate == "South":
             astate = astate + " " + argv[5]
+    """
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(user, pw, db), pool_pre_ping=True)
@@ -28,7 +30,7 @@ def get_a_state():
     session = Session()
 
     try:
-        state = session.query(State).filter_by(name = astate).first()
+        state = session.query(State).filter_by(name=astate).first()
         print("{}".format(state.id))
     except:
         print("Not Found")
