@@ -16,13 +16,13 @@ def get_a_state():
     db = argv[3]
     astate = argv[4]
 
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(user, pw, db), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name == astate).all()
+    state = session.query(State).filter_by(name == astate).first()
 
     if state is not None:
         print("{}".format(state.id))
