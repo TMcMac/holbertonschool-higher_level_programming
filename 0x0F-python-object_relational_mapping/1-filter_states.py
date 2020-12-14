@@ -18,9 +18,10 @@ if __name__ == '__main__':
                              user=un, passwd=p, db=d)
         cur = db.cursor()
         cur.execute("""SELECT * FROM states
-                       WHERE name LIKE 'N%'
+                       WHERE name LIKE BINARY 'N%'
                        ORDER BY 'id' ASC""")
         states = cur.fetchall()
+
     except MySQLdb.Error as e:
         try:
             print("MySQL Error [%d]: %s", e.args[0], e.args[1])

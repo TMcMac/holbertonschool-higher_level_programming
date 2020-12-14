@@ -19,7 +19,7 @@ if __name__ == '__main__':
                              user=un, passwd=pw, db=dbase)
         cur = db.cursor()
         cur.execute("""SELECT * FROM states
-                       WHERE name = '{}'
+                       WHERE name LIKE BINARY '{}'
                        ORDER BY id ASC""".format(state))
         states = cur.fetchall()
     except MySQLdb.Error as e:
