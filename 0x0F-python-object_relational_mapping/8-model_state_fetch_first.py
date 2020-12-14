@@ -16,13 +16,18 @@ def get_first_state():
     password = argv[2]
     db_name = argv[3]
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(user_name, password, db_name))
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(user_name, password, db_name))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).first():
+    state = session.query(State).first()
+
+    if state is not None:
         print("{}: {}".format(state.id, state.name))
+    else:
+        print("Nothing")
 
     session.close()
 
