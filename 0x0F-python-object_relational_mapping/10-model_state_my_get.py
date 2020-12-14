@@ -15,7 +15,6 @@ def get_a_state():
     db = argv[3]
     astate = argv[4]
 
-
     if len(argv) > 5 and argv[5] is not None:
         if astate == "New":
             astate = astate + " " + argv[5]
