@@ -22,7 +22,7 @@ def get_a_state():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name == astate)
+    state = session.query(State).filter(State.name == astate).all()
 
     if state is not None:
         print("{}".format(state.id))
