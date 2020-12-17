@@ -16,12 +16,13 @@ def state_cities():
     db = argv[3]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(un, pw, db), pool_pre_ping = True)
+                           .format(un, pw, db), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(City, State).join(State, State.id == City.state_id).all()
+    results = session.query(City, State).join(State,
+                                              State.id == City.state_id).all()
 
     for res in results:
         print("{}: ({}) {}".format(res[1].name, res[0].id, res[0].name))
