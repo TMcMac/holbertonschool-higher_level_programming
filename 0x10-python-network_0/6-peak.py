@@ -5,9 +5,9 @@
 def find_peak(list_of_integers):
     """Fine a peak in an unsorted list"""
     peaks = []
-    if list_of_integers is None:
+    if len(list_of_integers) == 0:
         return None
-    if len(list_of_integers) == 1:
+    elif len(list_of_integers) == 1:
         return list_of_integers[0]
     else:
         return max(list_of_integers)
