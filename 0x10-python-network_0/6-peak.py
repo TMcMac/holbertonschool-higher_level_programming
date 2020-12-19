@@ -1,4 +1,4 @@
-#!/usr/bin python3
+#!/usr/bin/python3
 """A simple python script to find peaks in an unsorted array"""
 
 
