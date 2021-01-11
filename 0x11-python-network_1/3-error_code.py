@@ -5,7 +5,7 @@ sends a request to the URL and displays the body of the response
 """
 
 if __name__ == '__main__':
-    from liburl import request, error
+    from urllib import request, error
     from sys import argv
 
     try:
