@@ -8,12 +8,10 @@ and displays the body of the response
 if __name__  == '__main__':
     from sys import argv
     from  urllib import request, parse
-    if argv[2]:
-        url = argv[1]
-        value = {}
-        value['email'] = argv[2]
-        data = parse.urlencode(value).encode('UTF-8')
-        req = request.Request(url, data)
-        with request.urlopen(req) as response:
-            content = response.read()
-            print(content.decode("UTF-8"))
+    value = {'email': argv[2]}
+    data1 = parse.urlencode(value)
+    data = data1.encode("utf-8")
+    req = request.Request(argv[1], data)
+    with request.urlopen(req) as response:
+        content = response.read()
+        print(content.decode("UTF-8"))
