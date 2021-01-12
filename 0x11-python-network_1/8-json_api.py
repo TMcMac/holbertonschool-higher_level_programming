@@ -9,12 +9,11 @@ if __name__ == '__main__':
     import requests
     from sys import argv
 
-    url = 'http://0.0.0.0:5000/search_user'
     data = {}
     if argv[1]:
-        data[q] = argv[1]
+        data['q'] = argv[1]
     else:
-        data[q] = ""
+        data['q'] = ""
     r = requests.post(url, data=data)
     try:
         json_s = r.json()
