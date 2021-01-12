@@ -11,8 +11,8 @@ if __name__ == '__main__':
 
     url = 'http://0.0.0.0:5000/search_user'
     data = {}
-    if argv[2]:
-        data[q] = argv[2]
+    if argv[1]:
+        data[q] = argv[1]
     else:
         data[q] = ""
     r = requests.post(url, data)
