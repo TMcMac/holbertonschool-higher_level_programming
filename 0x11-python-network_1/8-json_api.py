@@ -15,7 +15,7 @@ if __name__ == '__main__':
         data[q] = argv[1]
     else:
         data[q] = ""
-    r = requests.post(url, data)
+    r = requests.post(url, data=data)
     try:
         json_s = r.json()
         if json_s == {}:
